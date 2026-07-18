@@ -1,0 +1,22 @@
+{:migration/id :silicon/standalone
+ :migration/date "2026-07-18"
+ :migration/source {:repository "com-junkawasaki/root"
+                    :revision "5b55209ad38b73e45661e58172b98a4db2deb1d4"
+                    :path "20-actors/silicon"}
+ :migration/target "etzhayyim/com-etzhayyim-silicon"
+ :migration/canonical-format :edn
+ :migration/layout {:source "src/silicon" :test "test/silicon"
+                    :contracts "kotoba"}
+ :migration/removed ["run_tests.sh" "kotoba/deploy.sh"]
+ :migration/deprecated-languages {:go :pruned :tinygo :pruned :found []}
+ :migration/wire-policy {:json :wire-only :json-ld :wire-only}
+ :migration/central-assets
+ ["00-contracts/lexicons/com/etzhayyim/silicon/chipManufacturingAttestation.json"
+  "00-contracts/lexicons/com/etzhayyim/silicon/fabEquipmentTelemetry.json"
+  "00-contracts/lexicons/com/etzhayyim/silicon/silenForceReview.json"
+  "00-contracts/lexicons/com/etzhayyim/silicon/waferLotAttestation.json"]
+ :migration/central-assets-policy :retain-in-contract-repository
+ :migration/root-drain
+ {:remove ["20-actors/silicon"]
+  :update ["70-tools/src/etzhayyim/lint/shell-baseline.edn"
+           "70-tools/scripts/kotoba-migration-bakeoff/corpus.edn"]}}

@@ -1,0 +1,13 @@
+{:operations/actor :silicon
+ :operations/default :dry-run
+ :operations/test ["clojure" "-M:test" "-m" "silicon.test-runner"]
+ :operations/ingest
+ {:entrypoint silicon.kotoba.ingest-mcp/-main
+  :seed "kotoba/seed.edn"
+  :graph "com.etzhayyim.silicon"
+  :live-requires ["KOTOBA_TOKEN"]
+  :status :live-placeholder}
+ :operations/gates
+ {:real-fab-dispatch :council-required
+  :signing :member-or-operator-key
+  :server-key-held false}}
