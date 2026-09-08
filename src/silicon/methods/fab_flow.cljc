@@ -19,7 +19,7 @@
     G11 outward-gated — this is DRY-RUN design only. `dispatch-equipment!` (real
         actuation) is structurally unrepresentable at R0 and raises a :council-gate
         ex-info. No method here moves real fab equipment."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── numeric helpers ─────────────────────────────────────────────────────────
 

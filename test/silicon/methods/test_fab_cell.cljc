@@ -1,6 +1,6 @@
 (ns silicon.methods.test-fab-cell
   "Tests for silicon.methods.fab-cell (end-to-end orchestration)."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.lang.text] [clojure.test :refer [deftest is]]
             [silicon.methods.fab-cell :as cell]
             [silicon.methods.fab-flow :as flow]))
 
@@ -11,7 +11,7 @@
     (is (< 0.0 (:yield out) 1.000001))
     (is (pos? (:good-die out)))
     (is (<= (:packaged-units out) (:good-die out)))
-    (is (clojure.string/starts-with? (:tx-cid out) "b"))
+    (is (kotoba.lang.text/starts-with? (:tx-cid out) "b"))
     (is (pos? (:datom-count out)))
     (is (:reachable out))
     (is (pos? (get-in out [:throughput :wph])))))

@@ -1,7 +1,7 @@
 (ns silicon.cells.mask-lithography.state-machine
   "Mask lithography state machine — 1:1 port of cells/mask_lithography/state_machine.py (ADR-2605242500).
   Deterministic R0 mock-data phase machine (INIT → … → MASK_VERIFIED, completionPct 0→100)."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (def state-defaults {"phase" "init" "waferId" "WAFER-DEMO-0001" "completionPct" 0})
 (defn- cs [state] (merge state-defaults (get state "mask_state" {})))

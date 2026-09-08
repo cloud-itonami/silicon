@@ -1,7 +1,7 @@
 (ns silicon.cells.wafer-processing.state-machine
   "Wafer processing state machine — 1:1 port of cells/wafer_processing/state_machine.py (ADR-2605242500).
   Deterministic R0 mock-data phase machine (INIT → … → WAFER_VERIFIED, completionPct 0→100)."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (def state-defaults {"phase" "init" "lotId" "LOT-DEMO-0001" "completionPct" 0})
 (defn- cs [state] (merge state-defaults (get state "wafer_state" {})))

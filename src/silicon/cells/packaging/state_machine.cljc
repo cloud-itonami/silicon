@@ -1,7 +1,7 @@
 (ns silicon.cells.packaging.state-machine
   "Packaging state machine — 1:1 port of cells/packaging/state_machine.py (ADR-2605242500).
   Deterministic R0 mock-data phase machine (INIT → … → PACKAGE_TESTED, completionPct 0→100)."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (def state-defaults {"phase" "init" "packageId" "PKG-DEMO-0001" "completionPct" 0})
 (defn- cs [state] (merge state-defaults (get state "packaging_state" {})))
