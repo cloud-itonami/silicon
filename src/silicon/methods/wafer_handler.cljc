@@ -7,7 +7,7 @@
   Counterpart to niyaku's `agv_transfer`; same R0 posture (G11 — model only).
 
   Per ADR-2605242545. Pure Clojure (clojure.core only); portable .cljc."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- round [n x]
   (let [f (Math/pow 10.0 n)]

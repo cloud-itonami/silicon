@@ -9,7 +9,7 @@
 
   Per ADR-2605242500 + 2605262130 (kotoba Datom log = canonical state). No silent
   truncation: every step in the lot record is emitted. JVM-only (SHA-256)."
-  (:require [clojure.string :as str])
+  (:require [kotoba.lang.text :as str])
   #?(:clj (:import [java.security MessageDigest])))
 
 ;; ── content-addressing (byte-identical to meisai.methods.kotoba) ─────────────

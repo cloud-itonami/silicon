@@ -2,7 +2,7 @@
   "Chip testing state machine — 1:1 port of cells/chiptest/state_machine.py (ADR-2605242500).
   Deterministic R0 mock-data phase machine (INIT → … → CHIP_GRADED, completionPct 0→100).
   .solve() raises until Council Lv6+ activation."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (def state-defaults {"phase" "init" "dieId" "DIE-DEMO-0001" "completionPct" 0})
 (defn- cs [state] (merge state-defaults (get state "chiptest_state" {})))
