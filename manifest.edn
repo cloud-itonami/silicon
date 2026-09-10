@@ -44,13 +44,13 @@
  ;; runnable methods (pure clojure.core, .cljc — the only silicon code that RUNS at
  ;; R0; cells/* langgraph .solve() stays Council-gated). See methods/README.md.
  :actor/methods
- [{:method/id "fab-flow"      :method/file "src/silicon/methods/fab_flow.cljc"
+ [{:method/id "fab-flow"      :method/file "src/silicon/methods/fab_flow.kotoba"
    :method/desc "8-工程 wafer-lot process-physics sim (Bossung CD / film / etch / LSS implant / CMP / SPC / Poisson yield / assembly); defect-density→yield; G1 force-review + G11 council-gated dispatch"}
-  {:method/id "wafer-handler" :method/file "src/silicon/methods/wafer_handler.cljc"
+  {:method/id "wafer-handler" :method/file "src/silicon/methods/wafer_handler.kotoba"
    :method/desc "cluster-tool wafer-handling robotics: trapezoidal move profile, loadlock pump/vent, throughput, SCARA 2-link FK/IK + reachability (kami-genesis PlanarChain-iso, pure cljc)"}
-  {:method/id "lot-ledger"    :method/file "src/silicon/methods/lot_ledger.cljc"
+  {:method/id "lot-ledger"    :method/file "src/silicon/methods/lot_ledger.kotoba"
    :method/desc "G8 lot traceability: :silicon.lot/* + :silicon.step/* EAVT datoms, sha256 commit-DAG (meisai/kotoba canonicalization), tamper-evident verify-chain"}
-  {:method/id "fab-cell"      :method/file "src/silicon/methods/fab_cell.cljc"
+  {:method/id "fab-cell"      :method/file "src/silicon/methods/fab_cell.kotoba"
    :method/desc "end-to-end orchestration: reachability → fab-flow → lot-ledger commit (run-fab-lot / run-reference)"}]
 
  ;; lexicons already exist under 00-contracts/lexicons/com/etzhayyim/silicon/
