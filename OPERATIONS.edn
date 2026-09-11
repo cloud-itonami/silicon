@@ -1,6 +1,6 @@
 {:operations/actor :silicon
  :operations/default :dry-run
- :operations/test ["clojure" "-M:test" "-m" "silicon.test-runner"]
+ :operations/test ["kbb" "-M:test" "-m" "silicon.test-runner"]
  :operations/ingest
  {:entrypoint silicon.kotoba.ingest-mcp/-main
   :seed "kotoba/seed.edn"
