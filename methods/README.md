@@ -27,7 +27,7 @@ the actor that *runs* at R0; the `cells/*` are langgraph Pregel scaffolds whose
 ## Run
 
 ```bash
-clojure -M:test -m silicon.test-runner
+kbb -M:test -m silicon.test-runner
 ```
 
 The standalone suite covers the methods, cell state machines, and dry-run Kotoba ingest.

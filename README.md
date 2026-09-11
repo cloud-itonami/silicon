@@ -10,7 +10,7 @@ only at external wire boundaries.
 ## Test
 
 ```bash
-clojure -M:test -m silicon.test-runner
+kbb -M:test -m silicon.test-runner
 ```
 
 The implementation is deterministic R0 design/simulation code. Real equipment dispatch remains
